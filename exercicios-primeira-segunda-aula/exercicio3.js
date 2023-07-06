@@ -11,15 +11,25 @@ Código condição de pagamento:
 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
 
+function aplicarDesconto(valor, desconto) {
+    desconto = valor * (desconto / 100);
+    return valor - desconto;
+}
+
+function aplicarJuros(valor, juros) {
+    juros = valor * (juros / 100);
+    return valor + juros;
+}
+
 const precoEtiqueta = 100;
 const formaPagamento = 4;
 
 if (formaPagamento === 1) {
-    console.log('Valor a pagar: ' + (precoEtiqueta - (precoEtiqueta * 0.1)).toFixed(2));
+    console.log('Valor a pagar: ' + aplicarDesconto(precoEtiqueta, 10).toFixed(2));
 } else if (formaPagamento === 2) {
-    console.log('Valor a pagar: ' + (precoEtiqueta - (precoEtiqueta * 0.15)).toFixed(2));
+    console.log('Valor a pagar: ' + aplicarDesconto(precoEtiqueta, 15).toFixed(2));
 } else if (formaPagamento === 3) {
     console.log('Valor a pagar: ' + valorTotal.toFixed(2));
 } else {
-    console.log('Valor a pagar: ' + ( precoEtiqueta + ( precoEtiqueta * 0.1 )).toFixed(2) );
-}
+    console.log('Valor a pagar: ' + aplicarJuros(precoEtiqueta, 10).toFixed(2) );
+}  
