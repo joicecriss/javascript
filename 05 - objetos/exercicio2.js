@@ -41,5 +41,5 @@ class Pessoa {
 const joice = new Pessoa('Joice', 72.80, 1.69);
 console.log('Olá ' + joice.nome + ', esse é o valor do seu IMC ' + joice.calcularImc() + ' e esta é sua classificação: ' + joice.classificarImc());
 
-const jose = new Pessoa('José', 70, 1.75);
+const 65jose = new Pessoa('José', 70, 1.75);
 console.log('Olá ' + jose.nome + ', esse é o valor do seu IMC ' + jose.calcularImc() + ' e esta é sua classificação: ' + jose.classificarImc());
