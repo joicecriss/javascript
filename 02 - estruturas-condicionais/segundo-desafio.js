@@ -13,14 +13,14 @@ Imprima no console o valor que será gasto para realizar esta viagem
 
 // Vídeo parou em 30 minutos
 
-const etanol = 3.09;
+const etanol = 5;
 const gasolina = 4.75;
 const tipo = 'etanol';
-const kmPorLitro = 10;
-const distancia = 300;
+const kmPorLitro = 12;
+const distancia = 70;
 
 const litrosConsumidos = distancia / kmPorLitro;
-const valorGasto = 0;
+let valorGasto = 0;
 
 if (tipo == 'etanol') {
     valorGasto = litrosConsumidos * etanol;
